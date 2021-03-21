@@ -1,8 +1,8 @@
 defmodule Flightex.Factory do
   use ExMachina
 
-  alias Flightex.Users.User
   alias Flightex.Bookings.Booking
+  alias Flightex.Users.User
 
   def user_factory do
     %User{

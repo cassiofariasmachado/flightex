@@ -1,9 +1,9 @@
 defmodule Flightex.Users.AgentTest do
   use ExUnit.Case
 
-  alias Flightex.Users.Agent, as: UserAgent
-
   import Flightex.Factory
+
+  alias Flightex.Users.Agent, as: UserAgent
 
   describe "save/1" do
     setup %{} do

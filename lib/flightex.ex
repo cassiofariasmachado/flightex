@@ -1,10 +1,14 @@
 defmodule Flightex do
-  alias Flightex.Users.Create, as: CreateUser
-  alias Flightex.Users.Agent, as: UserAgent
+  @moduledoc """
+  Documentation for `Flightex`.
+  """
+
   alias Flightex.Bookings.Agent, as: BookingAgent
   alias Flightex.Bookings.Create, as: CreateBooking
   alias Flightex.Bookings.Get, as: GetBooking
   alias Flightex.Bookings.Report, as: BookingReport
+  alias Flightex.Users.Agent, as: UserAgent
+  alias Flightex.Users.Create, as: CreateUser
 
   @doc """
   Starts the agents.
@@ -15,16 +19,12 @@ defmodule Flightex do
       {:ok, "Agents started"}
 
   """
-  def start_agents() do
+  def start_agents do
     UserAgent.start_link(%{})
     BookingAgent.start_link(%{})
 
     {:ok, "Agents started"}
   end
-
-  @moduledoc """
-  Documentation for `Flightex`.
-  """
 
   @doc """
   Create an user.

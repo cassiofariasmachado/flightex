@@ -11,7 +11,7 @@ defmodule Flightex.Bookings.Agent do
 
   def get(id), do: Agent.get(__MODULE__, &get_booking(&1, id))
 
-  def get_all(), do: Agent.get(__MODULE__, & &1)
+  def get_all, do: Agent.get(__MODULE__, & &1)
 
   def get(%NaiveDateTime{} = from_date, %NaiveDateTime{} = to_date) do
     bookings =

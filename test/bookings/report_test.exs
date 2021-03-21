@@ -1,10 +1,10 @@
 defmodule Flightex.Bookings.ReportTest do
   use ExUnit.Case
 
+  import Flightex.Factory
+
   alias Flightex.Bookings.Agent, as: BookingAgent
   alias Flightex.Bookings.Report
-
-  import Flightex.Factory
 
   describe "call/2" do
     setup %{} do
