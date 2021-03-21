@@ -39,6 +39,9 @@ iex> Flightex.get_booking(booking_id)
 
 iex> Flightex.get_booking(invalid_booking_id)
 # -> {:error, "Flight Booking not found"}
+
+iex> Flightex.generate_report(from_date, to_date)
+# -> {:ok, "Report generated successfully"}
 ```
 
 ## :white_check_mark: Test

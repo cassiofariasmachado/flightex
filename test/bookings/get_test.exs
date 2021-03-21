@@ -1,10 +1,10 @@
 defmodule Flightex.Bookings.GetTest do
   use ExUnit.Case
 
-  import Flightex.Factory
-
   alias Flightex.Bookings.Agent, as: BookingAgent
   alias Flightex.Bookings.Get
+
+  import Flightex.Factory
 
   describe "call/1" do
     setup %{} do

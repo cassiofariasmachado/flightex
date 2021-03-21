@@ -4,6 +4,7 @@ defmodule Flightex do
   alias Flightex.Bookings.Agent, as: BookingAgent
   alias Flightex.Bookings.Create, as: CreateBooking
   alias Flightex.Bookings.Get, as: GetBooking
+  alias Flightex.Bookings.Report, as: BookingReport
 
   @doc """
   Starts the agents.
@@ -78,4 +79,15 @@ defmodule Flightex do
 
   """
   defdelegate get_booking(booking_id), to: GetBooking, as: :call
+
+  @doc """
+  Generates a booking report.
+
+  ## Examples
+
+      iex> Flightex.generate_report(~N[2020-09-01 00:00:00], ~N[2020-09-30 00:00:00])
+      {:ok, "Report generated successfully"}
+
+  """
+  defdelegate generate_report(from_date, to_date), to: BookingReport, as: :call
 end
